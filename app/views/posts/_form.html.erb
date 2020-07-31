@@ -12,6 +12,8 @@
   <% end %>
 
   <div class="actions">
+    <%= form.text_area :body, size: "30x10", placeholder: "What's on your mind?"%><br>
+    <%= form.hidden_field :user_id, :value => current_user.id %>
     <%= form.submit %>
   </div>
 <% end %>
