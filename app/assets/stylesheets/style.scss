@@ -1,8 +1,13 @@
-#user-nav {
-  background-color: black;
+#user_nav {
+  background-color: darkblue;
+  color: white;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 20px;
+}
+
+#heading {
+  padding: .5em;
 }
