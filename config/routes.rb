@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root 'posts#index'
+
+  devise_for :users, path: "accounts"
+  
   resources :posts
-  devise_for :users
+  resources :users do
+    resources :friendships
+  end
+
 end
