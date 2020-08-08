@@ -18,7 +18,7 @@
         <%= post.body%>
       </div>
       <div class="post-comments">
-        <%= form_with(url: root_path, method: :post) do |form|%>
+        <%= form_with(url: comments_path, method: :post) do |form|%>
           <%= form.text_area :body, style: "width:100%", placeholder: "Write a comment..."%>
           <%= form.hidden_field :post_id, :value => post.id %>
           <%= form.submit "Comment"%>
