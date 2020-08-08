@@ -1,24 +1,18 @@
-# README
+# Fakebook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Facebook clone using Ruby on Rails.
 
-Things you may want to cover:
+Final project of the Rails curriculum from The Odin Project (https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
 
-* Ruby version
+## Features
 
-* System dependencies
+- Model/Association logic that allows users to create, like and comment on posts
+- Users can send and accept friend requests
+- Secure login,password/session management through the Devise gem
+- Uses PostgreSQL database
 
-* Configuration
+## To be added
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Finish HTML/CSS views for frontend interaction
+- Add OAuth to allow sign-in through user's real Facebook account
+- Set up mailer to send welcome email wh
