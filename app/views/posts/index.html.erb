@@ -29,8 +29,13 @@
         <div class="existing-comments">
           <% post.comments.each do |comment|%>
             <div class="comment">
-              
-              <%=comment.body%>
+              <div class="comment-head">
+                <%=comment.author.first_name%>
+                <%=comment.author.last_name%>
+              </div>
+              <div class="comment-body">
+                <%=comment.body%>
+              </div>
             </div>
           <%end%>
         </div>
