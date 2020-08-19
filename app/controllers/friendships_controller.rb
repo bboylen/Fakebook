@@ -1,23 +1,18 @@
 class FriendshipsController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @user = User.find(params[:user_id])
-    @friendships = @user.friends + @user.inverse_friends
-    @friendships = @friendships.sort_by {|friend| friend.first_name}
-    @friend_requests = @user.friend_requests_as_receiver
-  end
-
   def create
     @friendship = Friendship.new(friendship_params)
 
     respond_to do |format|
       if @friendship.save
-        format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
+        @friend_request = FriendRequest.find(params[:request_id])
+        @friend_request.destroy # does this violate OOP best practice? Couldn't figure out routing to destroy action
+        format.html { redirect_to users_path, notice: 'Friend request accepted.'}
+        #format.json { render :show, status: :created, location: @post }
       else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to users_path }
+        #format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -25,7 +20,7 @@ class FriendshipsController < ApplicationController
   def destroy
     @friendship.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to users_path, notice: 'Unfriend complete.' }
       format.json { head :no_content }
     end
   end

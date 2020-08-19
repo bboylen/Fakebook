@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :posts
   resources :users, path: :friends
   resources :friend_requests
+  resources :friendships
   resources :comments, only: [:create, :destroy]
 end

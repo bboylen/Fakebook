@@ -22,7 +22,7 @@ class FriendRequestsController < ApplicationController
   def destroy
     @friend_request.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to users_path, notice: 'Friend request accepted.'}
       format.json { head :no_content }
     end
   end

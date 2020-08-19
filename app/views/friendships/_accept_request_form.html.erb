@@ -12,8 +12,9 @@
   <% end %>
 
   <div class="actions">
-    <%= form.hidden_field :user_id, :value => current_user.id %>
-    <%= form.hidden_field :friend_id, :value => friend.id %>
+    <%= hidden_field_tag :request_id, request.id%>
+    <%= form.hidden_field :user_id, :value => request.receiver_id %>
+    <%= form.hidden_field :friend_id, :value => request.requestor_id %>
     <%= form.submit "Accept Friend Request"%>
   </div>
 <% end %>
