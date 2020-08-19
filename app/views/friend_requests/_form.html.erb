@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="actions">
-    <%= form.text_area :body, style: "30x10", placeholder: "What's on your mind?"%><br>
     <%= form.hidden_field :requestor_id, :value => current_user.id %>
-    <%= form.submit %>
+    <%= form.hidden_field :receiver_id, :value => ?????????? %>
+    <%= form.submit "Send Friend Request"%>
   </div>
 <% end %>
