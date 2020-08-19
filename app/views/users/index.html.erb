@@ -7,6 +7,7 @@
       <div class="request">
         <%= request.requestor.first_name %>
         <%= request.requestor.last_name %>
+        <%= render 'friendships/accept_request_form', friendship: @friendship, request: request%>
       </div>
     <% end %>
   </div>
@@ -32,7 +33,7 @@
         <% if @pending_requests_user_ids.include?(friend.id) %>
           <span id="request-sent">Friend Request Sent</span>
         <% else %>
-          <%= render 'friend_requests/form', post: @friend_request, friend: friend %>
+          <%= render 'friend_requests/send_request_form', request: @friend_request, friend: friend %>
         <% end %>
       </div>
     <% end %>

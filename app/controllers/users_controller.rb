@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @user_not_friends = User.all # Think of a more efficient way to do this?
     @user_not_friends = @user_not_friends.reject {|user| @user_friends.include?(user)}
     @user_not_friends.delete(@user)
+
     @friend_request = FriendRequest.new
+    @friendship = Friendship.new
 
     @pending_requests_user_ids = []
     @user.friend_requests_as_requestor.each do |request|

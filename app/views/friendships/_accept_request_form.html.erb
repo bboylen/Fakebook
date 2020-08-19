@@ -1,0 +1,19 @@
+<%= form_with(model: friendship, local: true) do |form| %>
+  <% if friendship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(friendship.errors.count, "error") %> prohibited this friend request from being accepted:</h2>
+                  
+      <ul>
+        <% friendship.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.hidden_field :user_id, :value => current_user.id %>
+    <%= form.hidden_field :friend_id, :value => friend.id %>
+    <%= form.submit "Accept Friend Request"%>
+  </div>
+<% end %>

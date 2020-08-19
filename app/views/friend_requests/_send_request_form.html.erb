@@ -1,10 +1,10 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
+<%= form_with(model: request, local: true) do |form| %>
+  <% if request.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(request.errors.count, "error") %> prohibited this friend request from being sent:</h2>
                   
       <ul>
-        <% post.errors.full_messages.each do |message| %>
+        <% request.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
