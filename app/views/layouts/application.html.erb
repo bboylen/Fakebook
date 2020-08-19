@@ -16,7 +16,7 @@
       <% if user_signed_in? %>
         Signed in as <%= current_user.first_name %> <%= current_user.last_name %>. Not you?
         <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-        <%= link_to "Your Friends", user_friendships_path(current_user.id)%>
+        <%= link_to "Friends", users_path%>
       <% end %>
     </div>
 

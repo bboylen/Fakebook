@@ -2,6 +2,15 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  def index
+    @user = current_user
+    @user_friends = @user.friends + @user.inverse_friends
+    @user_not_friends = User.all # Think of a more efficient way to do this?
+    @user_not_friends = @user_not_friends.reject {|user| @user_friends.include?(user)}
+    @user_not_friends.delete(@user)
+    @friend_request = FriendRequest.new
+  end
+
   def show
   end
 

@@ -9,7 +9,7 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @friendship = Friendship.new(post_params)
+    @friendship = Friendship.new(friendship_params)
 
     respond_to do |format|
       if @friendship.save

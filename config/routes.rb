@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   devise_for :users, path: "accounts"
   
   resources :posts
-  resources :users do
-    resources :friendships
+  resources :users, path: :friends do
+    resources :friend_requests
   end
   resources :comments, only: [:create, :destroy]
 end

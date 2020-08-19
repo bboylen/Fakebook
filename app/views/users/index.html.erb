@@ -1,24 +1,39 @@
 
-<h1>Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div id="feed">
+  <div id="friend-requests">
+    <div class="heading">
+      <h2>Friend Requests</h2>
+    </div>
+    <% @user.friend_requests_as_receiver.each do |request| %>
+      <div class="request">
+        <%= request.requestor.first_name %>
+        <%= request.requestor.last_name %>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
+  </div>
+  <div id="friends">
+    <div class="heading">
+      <h2>Friends</h2>
+    </div>
+    <% @user_friends.each do |friend| %>
+      <div class="friend">
+        <%= friend.first_name %>
+        <%= friend.last_name %>
+      </div>
+    <% end %>
+  </div>
+  <div id="not-friends">
+    <div class="heading">
+      <h2>Other Users</h2>
+    </div>
+    <% @user_not_friends.each do |friend| %>
+      <div class="friend">
+        <%= friend.first_name %>
+        <%= friend.last_name %>
+        <%= render 'friend_requests/form', post: @friend_request %>
+      </div>
+    <% end %>
+  </div>
+</div>
 <br>
-
-<%= link_to 'New User', new_user_path %>
