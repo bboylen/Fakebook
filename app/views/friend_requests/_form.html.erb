@@ -13,7 +13,7 @@
 
   <div class="actions">
     <%= form.hidden_field :requestor_id, :value => current_user.id %>
-    <%= form.hidden_field :receiver_id, :value => ?????????? %>
+    <%= form.hidden_field :receiver_id, :value => friend.id %>
     <%= form.submit "Send Friend Request"%>
   </div>
 <% end %>

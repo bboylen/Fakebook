@@ -10,11 +10,11 @@ class FriendRequestsController < ApplicationController
 
     respond_to do |format|
       if @friend_request.save
-        format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
+        format.html { redirect_to users_path, notice: 'Friend request sent.' }
+       # format.json { render :show, status: :created, location: @post }
       else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to users_path }
+       # format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -1,5 +1,3 @@
-
-
 <div id="feed">
   <div id="friend-requests">
     <div class="heading">
@@ -31,7 +29,11 @@
       <div class="friend">
         <%= friend.first_name %>
         <%= friend.last_name %>
-        <%= render 'friend_requests/form', post: @friend_request %>
+        <% if @pending_requests_user_ids.include?(friend.id) %>
+          <span id="request-sent">Friend Request Sent</span>
+        <% else %>
+          <%= render 'friend_requests/form', post: @friend_request, friend: friend %>
+        <% end %>
       </div>
     <% end %>
   </div>
