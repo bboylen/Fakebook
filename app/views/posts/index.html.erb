@@ -17,6 +17,9 @@
       <div class="post-content">
         <%= post.body%>
       </div>
+      <div class="post-likes">
+        <%= "#{post.likes} Likes"%>
+      </div>
       <div class="post-comments">
         <div class="new-comment">
           <%= form_with(url: comments_path, method: :post) do |form|%>
