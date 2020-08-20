@@ -30,7 +30,7 @@
       <div class="friend">
         <%= friend.first_name %>
         <%= friend.last_name %>
-        <% if @pending_requests_user_ids.include?(friend.id) %>
+        <% if @pending_requests_receiver_ids.include?(friend.id) %>
           <span id="request-sent">Friend Request Sent</span>
         <% else %>
           <%= render 'friend_requests/send_request_form', request: @friend_request, friend: friend %>
