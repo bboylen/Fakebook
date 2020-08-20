@@ -16,7 +16,8 @@
       <% if user_signed_in? %>
         Signed in as <%= current_user.first_name %> <%= current_user.last_name %>. Not you?
         <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-        <%= link_to "Friends", users_path%>
+        <%= link_to "Home", posts_path%>
+        <%= link_to "Friends #{ "(#{current_user.friend_requests_as_receiver.count})" unless current_user.friend_requests_as_receiver.empty?}", users_path%>
       <% end %>
     </div>
 
