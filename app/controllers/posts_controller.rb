@@ -3,9 +3,11 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    friend_ids = current_user.friends.pluck(:id)
+    friend_ids += current_user.inverse_friends.pluck(:id) 
+    @posts = Post.where(:user_id => current_user.id).or(Post.where(:user_id => friend_ids)).order(created_at: :desc) 
   end
-
+  
   def show
   end
 
