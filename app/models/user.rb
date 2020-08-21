@@ -6,8 +6,9 @@ class User < ApplicationRecord
          :omniauthable
          
   has_many :posts, dependent: :destroy
-
   has_many :comments, foreign_key: "author_id", dependent: :destroy
+  has_many :likes, dependent: :destroy
+
   has_many :friendships, dependent: :destroy   
   has_many :friends,  through: :friendships                              
   
