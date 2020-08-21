@@ -20,6 +20,9 @@
       <div class="post-likes">
         <%= "#{post.likes} Likes"%>
       </div>
+      <div class="like-post">
+        <%= render 'like_form'%>
+      </div>
       <div class="post-comments">
         <div class="new-comment">
           <%= form_with(url: comments_path, method: :post) do |form|%>
