@@ -52,6 +52,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def like
+    redirect_to posts_path
+  end
+
   private
     
     def set_post
