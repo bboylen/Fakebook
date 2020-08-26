@@ -18,7 +18,7 @@
         <%= post.body%>
       </div>
       <div class="post-likes">
-        <%= "#{post.likes} Likes"%>
+        <%= "#{post.like_count} Likes"%>
       </div>
       <div class="like-post">
         <%= render 'like_form', user_id: current_user.id, post: post%>

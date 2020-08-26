@@ -53,6 +53,11 @@ class PostsController < ApplicationController
   end
 
   def like
+    like = Like.new(post_id: params[:id], user_id: params[:user_id])
+    like.save
+    post = Post.find(params[:id])
+    post.like_count += 1
+    post.save
     redirect_to posts_path
   end
 

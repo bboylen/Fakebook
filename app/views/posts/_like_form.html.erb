@@ -1,6 +1,5 @@
 <%= form_with(:url => like_post_path(post.id), method: "post", local: true) do |form| %>
   <div class="actions">
-    <%= form.hidden_field :post_id, :value => post.id %>
     <%= form.hidden_field :user_id, :value => user_id %>
     <%= form.submit "Like"%>
   </div>
