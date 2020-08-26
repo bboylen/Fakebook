@@ -21,16 +21,11 @@
         <%= "#{post.like_count} Likes"%>
       </div>
       <div class="like-post">
-        <%= render 'like_form', user_id: current_user.id, post: post%>
+        <%= render 'like_form', user_id: current_user.id, post_id: post.id%>
       </div>
       <div class="post-comments">
         <div class="new-comment">
-          <%= form_with(url: comments_path, method: :post) do |form|%>
-            <%= form.text_area :body, style: "width:100%", placeholder: "Write a comment..."%>
-            <%= form.hidden_field :post_id, value: post.id %>
-            <%= form.hidden_field :author_id, value: current_user.id %>
-            <%= form.submit "Comment"%>
-          <% end %>
+          <%= render 'comment_form', author_id: current_user.id, post_id: post.id%>
         </div>
         <div class="existing-comments">
           <% post.comments.each do |comment|%>
