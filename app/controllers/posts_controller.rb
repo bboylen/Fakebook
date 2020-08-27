@@ -65,7 +65,16 @@ class PostsController < ApplicationController
   end
 
   def unlike
+    like = Like.where(post_id: params[:id], user_id: params[:user_id]).take
 
+    if like
+      like.destroy
+      post = Post.find(params[:id])
+      post.like_count -= 1
+      post.save
+    end
+
+    redirect_to posts_path
   end
 
   private
