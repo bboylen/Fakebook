@@ -54,10 +54,14 @@ class PostsController < ApplicationController
 
   def like
     like = Like.new(post_id: params[:id], user_id: params[:user_id])
-    like.save
-    post = Post.find(params[:id])
-    post.like_count += 1
-    post.save
+
+    unless like.already_exists?
+      like.save
+      post = Post.find(params[:id])
+      post.like_count += 1
+      post.save
+    end
+
     redirect_to posts_path
   end
 
