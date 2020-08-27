@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :posts do
     member do 
       post 'like'
+      post 'unlike'
     end
   end
   resources :users, path: :friends

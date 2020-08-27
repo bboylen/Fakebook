@@ -61,8 +61,11 @@ class PostsController < ApplicationController
       post.like_count += 1
       post.save
     end
-
     redirect_to posts_path
+  end
+
+  def unlike
+
   end
 
   private

@@ -25,4 +25,8 @@ class User < ApplicationRecord
     self.first_name = first_name.camelcase
     self.last_name = last_name.camelcase
   end
+
+  def likes?(post)
+    self.likes.any? {|like| like.post_id == post.id}
+  end
 end
