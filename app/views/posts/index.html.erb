@@ -7,44 +7,7 @@
 </div>
 
 <div id="feed">
-  <% @posts.each do |post| %>
-    <div class="post">
-      <div class="post-header">  
-        <span class="post-header-name">
-          <%= post.author.first_name%> <%= post.author.last_name%>
-        </span>
-      </div>
-      <div class="post-content">
-        <%= post.body%>
-      </div>
-      <div class="post-likes">
-        <%= "#{post.like_count} Likes"%>
-      </div>
-      <div class="like-post">
-        <%= link_to_if(!current_user.likes?(post), 'Like', like_post_path(post.id, user_id: current_user.id), method: :post) do 
-            link_to 'Liked', unlike_post_path(post.id, user_id: current_user.id), method: :post  
-          end %>
-      </div>
-      <div class="post-comments">
-        <div class="new-comment">
-          <%= render 'comment_form', author_id: current_user.id, post_id: post.id%>
-        </div>
-        <div class="existing-comments">
-          <% post.comments.each do |comment|%>
-            <div class="comment">
-              <div class="comment-head">
-                <%=comment.author.first_name%>
-                <%=comment.author.last_name%>
-              </div>
-              <div class="comment-body">
-                <%=comment.body%>
-              </div>
-            </div>
-          <%end%>
-        </div>
-      </div>
-    </div>
-  <% end %>
+  <%= render 'posts', posts: @posts %>
 </div>
 <br>
 

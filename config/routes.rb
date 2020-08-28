@@ -9,10 +9,10 @@ Rails.application.routes.draw do
       post 'unlike'
     end
   end
+  
   get 'friends', to: 'users#index'
   resources :users, except: [:index]
   
-#path: :friends
   resources :friend_requests
   resources :friendships
   resources :comments, only: [:create, :destroy]
