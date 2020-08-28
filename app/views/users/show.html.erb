@@ -1,10 +1,12 @@
 <div id="photo">
 </div>
 <div id="user-info">
-  <%= "#{current_user.first_name} #{current_user.last_name}"%>
+  <%= "First Name: #{current_user.first_name}"%>
+  <br>
+  <%= "Last Name: #{current_user.last_name}"%>
 </div>
 <div id="posts">
   <%= render 'posts/posts', posts: @posts%>
 </div>
-<%= link_to 'Edit', edit_user_path(@user) %> |
+
 
