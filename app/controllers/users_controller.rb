@@ -69,6 +69,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def set_profile_picture
+    if attached
+      unattach
+    end
+    self.profile_picture.attach(params[:profile_picture])
+  end
+
   private
 
     def set_user

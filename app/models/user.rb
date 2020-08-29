@@ -18,6 +18,8 @@ class User < ApplicationRecord
   has_many :friend_requests_as_receiver, class_name: "FriendRequest", foreign_key: "receiver_id", dependent: :destroy
   has_many :friend_requests_as_requestor, class_name: "FriendRequest", foreign_key: "requestor_id", dependent: :destroy
 
+  has_one_attached :profile_picture
+  
   validates :first_name, presence: true
   validates :last_name, presence: true
 
