@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :set_profile_picture]
   before_action :authenticate_user!
 
   def index
@@ -70,10 +70,11 @@ class UsersController < ApplicationController
   end
 
   def set_profile_picture
-    if attached
-      unattach
-    end
-    self.profile_picture.attach(params[:profile_picture])
+    #if attached
+    #  unattach
+    #end
+    @user.profile_picture.attach(params[:profile_picture])
+    redirect_to user_path(@user)
   end
 
   private

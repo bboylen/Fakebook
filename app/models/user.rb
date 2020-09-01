@@ -31,4 +31,5 @@ class User < ApplicationRecord
   def likes?(post)
     self.likes.any? {|like| like.post_id == post.id}
   end
+  
 end

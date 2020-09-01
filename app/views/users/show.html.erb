@@ -1,4 +1,8 @@
 <div id="photo">
+  <% if current_user.profile_picture.attached?%>
+    <img src="<%=(url_for(current_user.profile_picture))%>%">
+  <% end%>
+  <%= render 'picture_upload_form'%>
 </div>
 <div id="user-info">
   <%= "First Name: #{current_user.first_name}"%>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
   get 'friends', to: 'users#index'
   resources :users, except: [:index] do
-   # post 'set_profile_picture', on: :collection
+    post 'set_profile_picture', on: :member
   end
   
   resources :friend_requests
