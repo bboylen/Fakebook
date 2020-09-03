@@ -1,6 +1,6 @@
 <div id="photo">
   <% if current_user.profile_picture.attached?%>
-    <img src="<%=(url_for(current_user.profile_picture))%>%">
+    <%= image_tag(url_for(current_user.profile_picture), :size => '260x180')%>
   <% end%>
   <%= render 'picture_upload_form'%>
 </div>

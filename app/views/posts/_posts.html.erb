@@ -1,7 +1,13 @@
 <% posts.each do |post| %>
     <div class="post">
-      <div class="post-header">  
+      <div class="post-header">
+        <span class="post-header-image"> 
+          <% if post.author.profile_picture.attached?%>
+            <%= image_tag(url_for(post.author.profile_picture), :size => '35x35')%>
+          <%end%>
+        </span>
         <span class="post-header-name">
+        
           <%= post.author.first_name%> <%= post.author.last_name%>
         </span>
       </div>

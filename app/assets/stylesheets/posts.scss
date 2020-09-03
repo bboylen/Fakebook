@@ -26,12 +26,19 @@
   background-color: rgb(241, 241, 241);
 }
 
+.post-header-image {
+  vertical-align: middle;
+  padding-left: 2%;
+  padding-top: 2%;
+}
+
 .post-header-name {
   display: inline-block;
   vertical-align: middle;
   height: 3em;
   line-height: 3em;
-  padding-left: 10%;
+  padding-left: 2%;
+  padding-bottom: 2%;
 }
 
 .post-content {
