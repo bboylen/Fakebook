@@ -23,6 +23,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  devise :omniauthable, :omniauth_providers => [:facebook]
+
   def capitalize_names
     self.first_name = first_name.camelcase
     self.last_name = last_name.camelcase

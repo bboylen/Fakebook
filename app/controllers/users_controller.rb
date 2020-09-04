@@ -70,9 +70,6 @@ class UsersController < ApplicationController
   end
 
   def set_profile_picture
-    #if attached
-    #  unattach
-    #end
     @user.profile_picture.attach(params[:profile_picture])
     redirect_to user_path(@user)
   end

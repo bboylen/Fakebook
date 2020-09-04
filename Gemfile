@@ -28,7 +28,11 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Use Devise to implement secure signup/logins
 gem 'devise'
+
+# Use Omniauth to allow OAuth with Facebook
+gem 'omniauth-facebook'
 
 # Use Amazon S3
 gem "aws-sdk-s3", require: false
