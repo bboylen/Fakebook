@@ -273,8 +273,9 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :facebook, Rails.application.credentials.dig(:facebook, :app_id), 
                              Rails.application.credentials.dig(:facebook, :app_secret),
-                             callback_url: 'http://localhost:3000/auth/facebook/callback'
-                          
+                             callback_url: 'http://localhost:3000/accounts/auth/facebook/callback'
+                             
+                         
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

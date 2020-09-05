@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 
 # Use Omniauth to allow OAuth with Facebook
+gem 'omniauth'
 gem 'omniauth-facebook'
 
 # Use Amazon S3

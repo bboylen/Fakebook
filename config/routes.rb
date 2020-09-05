@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'posts#index'
 
-  devise_for :users, path: "accounts"
+  devise_for :users, path: "accounts", :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' }
   
   resources :posts do
     member do 

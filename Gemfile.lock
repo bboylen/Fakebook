@@ -256,6 +256,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  omniauth
   omniauth-facebook
   pg
   puma (~> 4.1)
