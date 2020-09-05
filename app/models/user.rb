@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  before_save :capitalize_names
+  before_save :capitalize_names, if: -> { self.last_name}
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
@@ -20,8 +20,8 @@ class User < ApplicationRecord
 
   has_one_attached :profile_picture
   
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  #validates :first_name, presence: true
+  #validates :last_name, presence: true
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
@@ -46,8 +46,8 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      user.name = auth.info.name # assuming the user model has a name
-      user.image = auth.info.image # assuming the user model has an image
+     # user.name = auth.info.name # assuming the user model has a name
+     # user.image = auth.info.image # assuming the user model has an image
     end
   end
   
