@@ -3,7 +3,19 @@ Rails.application.configure do
 
   #Set Mailer action to Heroku URL
   config.action_mailer.default_url_options = { host: 'lit-woodland-51918.herokuapp.com', port: 3000 }
-
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_caching = false
+  config.action_mailer.smtp_settings = {
+    user_name:     'bbbrianboylen@gmail.com',
+    password:      Rails.application.credentials.dig(:gmail, :password),
+    domain:        'gmail.com',
+    address:       'smtp.gmail.com',
+    port:          '587',
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
