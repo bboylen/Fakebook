@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  before_save :capitalize_names, if: -> { self.last_name}
+  before_save :capitalize_names
+  after_create :send_welcome_email
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
@@ -20,8 +21,9 @@ class User < ApplicationRecord
 
   has_one_attached :profile_picture
   
-  #validates :first_name, presence: true
-  #validates :last_name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
@@ -46,9 +48,16 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-     # user.name = auth.info.name # assuming the user model has a name
-     # user.image = auth.info.image # assuming the user model has an image
+      user.first_name = auth.info.name.split.first
+      user.last_name = auth.info.name.split.last 
+     # user.profile_picture.attach(auth.info.image) # assuming the user model has an image
     end
+  end
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver
   end
   
 end

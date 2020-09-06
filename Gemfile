@@ -35,6 +35,9 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+# For testing email functionality in development
+gem "letter_opener", :group => :development
+
 # Use Amazon S3
 gem "aws-sdk-s3", require: false
 
