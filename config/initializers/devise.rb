@@ -273,7 +273,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :facebook, Rails.application.credentials.dig(:facebook, :app_id), 
                              Rails.application.credentials.dig(:facebook, :app_secret),
-                             callback_url: 'http://localhost:3000/accounts/auth/facebook/callback'
+                             callback_url: 'https://lit-woodland-51918.herokuapp.com/accounts/auth/facebook/callback'
                              
                          
 
