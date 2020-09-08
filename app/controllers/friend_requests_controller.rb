@@ -10,11 +10,10 @@ class FriendRequestsController < ApplicationController
 
     respond_to do |format|
       if @friend_request.save
-        format.html { redirect_to users_path, notice: 'Friend request sent.' }
-       # format.json { render :show, status: :created, location: @post }
+        format.html { redirect_to friends_path, notice: 'Friend request sent.' }
       else
-        format.html { redirect_to users_path }
-       # format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to friends_path }
+        format.json { render json: @friend_request.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -22,7 +21,7 @@ class FriendRequestsController < ApplicationController
   def destroy
     @friend_request.destroy
     respond_to do |format|
-      format.html { redirect_to users_path, notice: 'Friend request accepted.'}
+      format.html { redirect_to friends_path, notice: 'Friend request destroyed.'}
       format.json { head :no_content }
     end
   end

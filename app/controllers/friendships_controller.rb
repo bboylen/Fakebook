@@ -7,12 +7,11 @@ class FriendshipsController < ApplicationController
     respond_to do |format|
       if @friendship.save
         @friend_request = FriendRequest.find(params[:request_id])
-        @friend_request.destroy # does this violate OOP best practice? Couldn't figure out routing to destroy action
-        format.html { redirect_to users_path, notice: 'Friend request accepted.'}
-        #format.json { render :show, status: :created, location: @post }
+        @friend_request.destroy
+        format.html { redirect_to friends_path, notice: 'Friend request accepted.'}
       else
-        format.html { redirect_to users_path }
-        #format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to friends_path }
+        format.json { render json: @friendship.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -20,7 +19,7 @@ class FriendshipsController < ApplicationController
   def destroy
     @friendship.destroy
     respond_to do |format|
-      format.html { redirect_to users_path, notice: 'Unfriend complete.' }
+      format.html { redirect_to friends_path, notice: 'Unfriend complete.' }
       format.json { head :no_content }
     end
   end

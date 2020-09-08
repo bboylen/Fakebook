@@ -8,14 +8,8 @@ class PostsController < ApplicationController
     @posts = Post.where(:user_id => current_user.id).or(Post.where(:user_id => friend_ids)).order(created_at: :desc) 
   end
   
-  def show
-  end
-
   def new
     @post = Post.new
-  end
-
-  def edit
   end
 
   def create
