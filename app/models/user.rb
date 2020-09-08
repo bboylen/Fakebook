@@ -27,11 +27,6 @@ class User < ApplicationRecord
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
-  def capitalize_names
-    self.first_name = first_name.camelcase
-    self.last_name = last_name.camelcase
-  end
-
   def likes?(post)
     self.likes.any? {|like| like.post_id == post.id}
   end
@@ -50,11 +45,15 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.first_name = auth.info.name.split.first
       user.last_name = auth.info.name.split.last 
-     # user.profile_picture.attach(auth.info.image) # assuming the user model has an image
     end
   end
 
   private
+
+  def capitalize_names
+    self.first_name = first_name.camelcase
+    self.last_name = last_name.camelcase
+  end
 
   def send_welcome_email
     UserMailer.welcome_email(self).deliver
