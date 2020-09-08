@@ -6,13 +6,13 @@ Final project of the Rails curriculum from The Odin Project (https://www.theodin
 
 ## Features
 
-- [Devise](https://github.com/heartcombo/devise) used to handle user registration, authentication, recovery and omniauth
-- Model/Association logic that allows users to create, like and comment on posts
+- [Devise](https://github.com/heartcombo/devise) used to handle user registration, authentication, session management, recovery and omniauth
+  - User receives welcome email on registration
+- Users can create, like, and comment on Posts
+  - Can only see posts belonging to self or friends
 - Users can send and accept friend requests
-- Secure login,password/session management through the Devise gem
 - Uses PostgreSQL database
 - OAuth to allow sign-in through user's real Facebook account
-- User receives sign-up email 
 
 ## To be changed
 
