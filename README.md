@@ -26,9 +26,11 @@ Please try it out [here](https://lit-woodland-51918.herokuapp.com) (deployed on 
 
 ## In Summary 
 
-This was certainly the most involved project I have tackled and I am happy with how it came out - it isn't pretty but the functionality is solid. It was definitely a challenge to get all the model/controller/views logic completed in a clear and efficient manner. I certainly am coming to recognize the importance of getting a solid foundation on SQL as well as Active Record. It was not always apparent how I could call the information I needed from the database in an optimally efficient manner. 
+This was certainly the most involved project I have tackled and I am happy with how it came out - it isn't pretty but the functionality is solid. It was definitely a challenge to get all the model/controller/views logic implemented in a clear and efficient manner. I certainly am coming to recognize the importance of getting a solid foundation on SQL as well as Active Record. Finding an efficient way to call information I needed from the database was often a challenging task.
 
-I also learned a fair bit about getting outside services to work with Rails. In truth it took me quite a bit longer than I expected to get Amazon S3 storage and Facebook OAuth working. Often times many of the writeups on Medium or Stack Overflow contained outdated methods, forcing me to implement solutions cobbled together from multiple sources. While this was a bit of a hassle, it helped me learn some of the great Rails functionality that has been added in recent years, such as the fantastic ```config/credentials.yml.enc```
+I also learned a fair bit about getting outside services to work with Rails. In truth it took me quite a bit longer than I expected to get Amazon S3 storage and Facebook OAuth working. Often times many of the writeups on Medium or Stack Overflow contained outdated methods, forcing me to implement solutions cobbled together from multiple sources. While this was a bit of a hassle, it helped me learn some of the great Rails functionality that has been added in recent years, such as using ```config/credentials.yml.enc``` to store credentials. 
+
+While I want to eventually clean up this app some more, I think it is a better use of my time to move on and dive deeper into the front end side of things!
 
 
 
