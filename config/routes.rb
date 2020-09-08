@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   end
   
   get 'friends', to: 'users#index'
-  resources :users, except: [:index] do
+  resources :users, only: [:show] do
     post 'set_profile_picture', on: :member
   end
   
-  resources :friend_requests
-  resources :friendships
+  resources :friend_requests, only: [:create, :destroy]
+  resources :friendships, only: [:create, :destroy]
   resources :comments, only: [:create, :destroy]
 end
