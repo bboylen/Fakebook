@@ -12,7 +12,7 @@ Final project of the Rails curriculum from The Odin Project (https://www.theodin
   - Can only see posts belonging to self or friends
 - Users can send and accept friend requests
 - Uses PostgreSQL database
-- OAuth to allow sign-in through user's real Facebook account
+- [OAuth](https://github.com/simi/omniauth-facebook) to allow sign-in through user's real Facebook account
 
 ## To be changed
 
