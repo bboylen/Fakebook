@@ -19,7 +19,6 @@ Please try it out [here](https://lit-woodland-51918.herokuapp.com) (deployed on 
 ## To-do
 
 - Style with HTML/CSS and add JS (At the time of making this app, I have not learned much front-end development)
-- Fix Omniauth (FB access not working in production)
 - Allow posts to contain an image
 - Have Omniauth pull the User's Facebook profile photo
 - More functionality for deleting/editing user/comment/post information
