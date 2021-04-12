@@ -11,21 +11,22 @@
   </head>
 
   <body>
+    <div id="body-container">
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.first_name %> <%= current_user.last_name %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          <%= link_to "Home", root_path%>
+          <%= link_to "Friends #{ "(#{current_user.friend_requests_as_receiver.count})" unless current_user.friend_requests_as_receiver.empty?}", friends_path%>
+          <%= link_to "Profile", user_path(current_user.id)%>
+        <% end %>
+      </div>
 
-    <div id="user_nav">
-      <% if user_signed_in? %>
-        Signed in as <%= current_user.first_name %> <%= current_user.last_name %>. Not you?
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-        <%= link_to "Home", root_path%>
-        <%= link_to "Friends #{ "(#{current_user.friend_requests_as_receiver.count})" unless current_user.friend_requests_as_receiver.empty?}", friends_path%>
-        <%= link_to "Profile", user_path(current_user.id)%>
-      <% end %>
+      <div id="flashes">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+      <%= yield %>
     </div>
-
-    <div id="flashes">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-    <%= yield %>
   </body>
 </html>

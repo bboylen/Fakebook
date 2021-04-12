@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Nimbus-Sans';
+  src: url('Nimbus-Sans');
+}
+
 #user_nav {
   background-color: darkblue;
   color: white;
@@ -14,4 +19,18 @@
 
 #heading {
   padding: .5em;
+}
+
+#body-container {
+  background-color: #f5f5f5;
+  height: 100vh;
+  overflow: hidden;
+  padding: 20px 0 0 20px;
+  width: 100vw;
+  font-family: 'Nimbus-Sans';
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
 }
