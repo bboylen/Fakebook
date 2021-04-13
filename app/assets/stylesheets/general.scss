@@ -20,7 +20,8 @@ html {
 
 #body-container {
   background-color: #f0f0f0;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   overflow: hidden;
   padding: 20px 0 0 20px;
   margin-top: 20px;
@@ -29,6 +30,6 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
   margin: 0;
 }
