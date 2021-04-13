@@ -1,0 +1,35 @@
+#friends-feed {
+  display: flex;
+  margin: 0px auto 0 20px;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 10px;
+}
+
+#friend-requests, #friends, #not-friends {
+  margin-bottom: 20px;
+}
+
+#friend-requests h2, #friends h2, #not-friends h2{
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.friend {
+  font-size: 16px;
+  margin: 20px 0;
+  color: black;
+}
+
+.friend span {
+  color: #139100;
+}
+.friend .actions input {
+  background-color: #139100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 14px;
+  margin-top: 5px;
+}

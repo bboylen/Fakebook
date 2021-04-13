@@ -1,3 +1,5 @@
+
+
 #new-post {
   margin: 10px auto 20px auto;
   font-family: 'Roboto', sans-serif;
@@ -21,12 +23,13 @@
 
 .post {
   margin: 10px auto 20px auto;
+  padding-bottom: 5px;
   width: 50%;
   border-collapse: collapse;
-  background: rgba(255,255,255,0.9);
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  background: rgb(247,247,247);
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -72,11 +75,38 @@
 
 .post-likes, .like-post {
   padding: 5px 0 0 5px;
+  font-size: 16px;
+  color: black;
+  background: rgb(247,247,247);
 }
+
+.post-likes {
+  font-weight: 600;
+  color:#139100;
+}
+
+.new-comment form textarea {
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.new-comment form input {
+  background-color: #139100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
+.new-comment form input:hover {
+  cursor: pointer;
+}
+
 .post-comments {
   font-family: 'Roboto', sans-serif;
   font-size: 1.1em;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(245, 245, 245);
   margin: .5em;
 }
 
@@ -84,11 +114,15 @@
   font-family: 'Roboto', sans-serif;
   height: 3em;
   font-size: 1em;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
   text-align: left;
-  background-color: rgb(241, 241, 241);
+  background-color: rgba(255, 255, 255,.9);
   margin: 10px auto 10px auto;
+  padding: 4px 0 0 7px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
 .comment-head {
@@ -118,6 +152,7 @@
 }
 
 @media only screen and (max-width: 550px) {
+
   #new-post {
     width: 85%;
   }

@@ -1,0 +1,33 @@
+#new-post-page {
+  display: flex;
+  text-align: center;
+  margin: 0px auto 0 auto;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 10px;
+}
+
+#new-post-page .actions textarea {
+  width: 80%;
+  max-width: 500px;
+  height: 200px;
+  max-height: 300px;
+  font-size: 16px;
+}
+
+#new-post-page .actions input {
+  background-color: #139100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 18px;
+}
+
+#new-post-page .actions input:hover {
+  cursor: pointer;
+}
+
+#new-post-page a {
+  font-size: 18px;
+}

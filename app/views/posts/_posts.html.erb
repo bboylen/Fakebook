@@ -18,8 +18,8 @@
         <%= "#{post.like_count} Likes"%>
       </div>
       <div class="like-post">
-        <%= link_to_if(!current_user.likes?(post), 'Like', like_post_path(post.id, user_id: current_user.id), method: :post) do 
-            link_to 'Liked', unlike_post_path(post.id, user_id: current_user.id), method: :post  
+        <%= link_to_if(!current_user.likes?(post), 'Like?', like_post_path(post.id, user_id: current_user.id), method: :post) do 
+            link_to '(Liked)', unlike_post_path(post.id, user_id: current_user.id), method: :post  
           end %>
       </div>
       <div class="post-comments">
