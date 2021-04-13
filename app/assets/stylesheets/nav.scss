@@ -1,0 +1,43 @@
+#user_nav {
+  background-color: #139100;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  font-size: 18px;
+}
+
+#nav-content {
+  width: 600px;
+  height: 40px;
+  margin-left: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Responsive design
+
+@media only screen and (max-width: 650px) {
+  #nav-content {
+    font-size: 15px;
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #nav-content {
+    font-size: 15px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #nav-content {
+    font-size: 14px;
+    width: 300px;
+  }
+}
