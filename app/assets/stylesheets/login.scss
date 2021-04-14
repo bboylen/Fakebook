@@ -1,3 +1,27 @@
+#log-in-screen {
+  margin-left: 20px;
+  font-size: 18px;
+  color: black;
+}
+
+#log-in-screen .field label {
+  margin-bottom: 10px;
+}
+
+#remember-me {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+#log-in-screen .actions input {
+  background-color: #139100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
 .sign-in-links {
   display: flex;
   flex-direction: column;
@@ -6,3 +30,5 @@
   margin-top: 20px;
   font-size: 16px;
 }
+
+//set width for lower links so it doesnt scroll horizontally

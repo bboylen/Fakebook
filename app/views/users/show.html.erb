@@ -1,13 +1,19 @@
-<div id="photo">
-  <% if current_user.profile_picture.attached?%>
-    <%= image_tag(url_for(current_user.profile_picture), :size => '260x180')%>
-  <% end%>
-  <%= render 'picture_upload_form'%>
-</div>
-<div id="user-info">
-  <%= "First Name: #{current_user.first_name}"%>
-  <br>
-  <%= "Last Name: #{current_user.last_name}"%>
+<div id="profile-info">  
+  
+    <div id="profile-photo">
+      <% if current_user.profile_picture.attached?%>
+        <%= image_tag(url_for(current_user.profile_picture), :size => '260x180')%>
+      <%end%>
+      <% if !current_user.profile_picture.attached?%>
+        <p> Upload a profile photo!</p>
+      <%end%>
+    </div>
+    <div id="new-picture-links">
+      <%= render 'picture_upload_form'%>
+    </div>
+  <div id="user-info">
+    <%= "#{current_user.first_name} #{current_user.last_name}"%>
+  </div>
 </div>
 <div id="posts">
   <%= render 'posts/posts', posts: @posts%>
