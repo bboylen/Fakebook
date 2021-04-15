@@ -27,8 +27,12 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100px;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 16px;
+  color: black;
 }
 
+.sign-in-links a {
+  color: black;
+}
 //set width for lower links so it doesnt scroll horizontally
