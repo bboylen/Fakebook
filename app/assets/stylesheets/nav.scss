@@ -10,7 +10,7 @@
 }
 
 #nav-content {
-  width: 600px;
+  width: 700px;
   height: 40px;
   margin-left: 20px;
   font-weight: 600;
@@ -21,6 +21,13 @@
 
 // Responsive design
 
+@media only screen and (max-width: 750px) {
+  #nav-content {
+    font-size: 15px;
+    width: 600px;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   #nav-content {
     font-size: 15px;
@@ -30,14 +37,22 @@
 
 @media only screen and (max-width: 550px) {
   #nav-content {
-    font-size: 15px;
+    font-size: 13px;
     width: 400px;
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 450px) {
   #nav-content {
-    font-size: 14px;
+    font-size: 13px;
     width: 300px;
+  }
+}
+
+
+@media only screen and (max-width: 350px) {
+  #nav-content {
+    font-size: 13px;
+    width: 200px;
   }
 }
