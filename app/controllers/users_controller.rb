@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy, :set_profile_picture]
   before_action :authenticate_user!
-  before_action :add_default_friends, only: [:index]
+  
 
   def index
     @user = current_user
@@ -44,9 +44,4 @@ class UsersController < ApplicationController
       params.fetch(:user, {})
     end
 
-    def add_default_friends
-      unless current_user.friendships.any? {|friendship| friendship.friend_id === 4}        
-        Friendship.create(user_id: current_user.id, friend_id: 4)
-      end
-    end
 end

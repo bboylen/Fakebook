@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   before_save :capitalize_names
   after_create :send_welcome_email
+  after_create :add_default_friends
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
@@ -57,6 +58,14 @@ class User < ApplicationRecord
 
   def send_welcome_email
     UserMailer.welcome_email(self).deliver
+  end
+
+  def add_default_friends
+    Friendship.create(user_id: self.id, friend_id: 0)
+    Friendship.create(user_id: self.id, friend_id: 1)
+    Friendship.create(user_id: self.id, friend_id: 2)
+    Friendship.create(user_id: self.id, friend_id: 3)
+    Friendship.create(user_id: self.id, friend_id: 4)    
   end
   
 end

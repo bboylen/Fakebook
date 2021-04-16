@@ -22,6 +22,12 @@
   margin: 0 auto 0 auto;
   width: 260px;
   height: 180px;
+  background-color: white;
+}
+
+#profile-photo p {
+  font-size: 20px;
+
 }
 
 #new-picture-links {
@@ -64,7 +70,13 @@
   color: black;
   font-weight: 700;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+#posts p {
+  text-align: center;
+  font-size: 25px;
+  color: #139100;
 }
 
 @media only screen and (max-width: 550px) {
