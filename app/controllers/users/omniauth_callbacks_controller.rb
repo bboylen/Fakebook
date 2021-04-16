@@ -20,11 +20,13 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
  private
 
  def add_default_friends
-  Friendship.create(user_id: @user.id, friend_id: 0)
-  Friendship.create(user_id: @user.id, friend_id: 1)
-  Friendship.create(user_id: @user.id, friend_id: 2)
-  Friendship.create(user_id: @user.id, friend_id: 3)
-  Friendship.create(user_id: @user.id, friend_id: 4)    
+  if @user.friends.length == 0 
+    Friendship.create(user_id: @user.id, friend_id: 0)
+    Friendship.create(user_id: @user.id, friend_id: 1)
+    Friendship.create(user_id: @user.id, friend_id: 2)
+    Friendship.create(user_id: @user.id, friend_id: 3)
+    Friendship.create(user_id: @user.id, friend_id: 4)    
+  end
 end
 
 end
