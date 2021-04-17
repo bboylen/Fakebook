@@ -6,12 +6,6 @@ Final project of the Rails curriculum from [The Odin Project](https://www.theodi
 
 [Please try it out here](https://lit-woodland-51918.herokuapp.com) (deployed on Heroku)
 
-## Image
-
-![Screenshot from 2021-04-17 16-19-50](https://user-images.githubusercontent.com/52515015/115127137-c2af1980-9f99-11eb-9e2e-2cd152865b1e.png)
-
-
-
 ## Features
 
 - [Devise](https://github.com/heartcombo/devise) used to handle user registration, authentication, session management, recovery and omniauth
@@ -24,6 +18,9 @@ Final project of the Rails curriculum from [The Odin Project](https://www.theodi
 - Uses [AWS S3](https://aws.amazon.com/s3/) to store profile photos
 - Deployed on [Heroku](https://dashboard.heroku.com/)
 
+## Image
+
+![Screenshot from 2021-04-17 16-19-50](https://user-images.githubusercontent.com/52515015/115127137-c2af1980-9f99-11eb-9e2e-2cd152865b1e.png)
 ## To-do
 
 - Allow posts to contain an image
