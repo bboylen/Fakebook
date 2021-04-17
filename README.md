@@ -14,11 +14,11 @@ Please try it out [here](https://lit-woodland-51918.herokuapp.com) (deployed on 
 - Users can send and accept friend requests
 - Uses PostgreSQL database
 - [OAuth](https://github.com/simi/omniauth-facebook) to allow sign-in through user's real Facebook account
+- Uses [AWS S3](https://aws.amazon.com/s3/) to store profile photos
 - Deployed on [Heroku](https://dashboard.heroku.com/)
 
 ## To-do
 
-- Style with HTML/CSS and add JS (At the time of making this app, I have not learned much front-end development)
 - Allow posts to contain an image
 - Have Omniauth pull the User's Facebook profile photo
 - More functionality for deleting/editing user/comment/post information
