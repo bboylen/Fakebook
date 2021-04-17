@@ -18,7 +18,7 @@ Final project of the Rails curriculum from [The Odin Project](https://www.theodi
 - Uses [AWS S3](https://aws.amazon.com/s3/) to store profile photos
 - Deployed on [Heroku](https://dashboard.heroku.com/)
 
-## Image
+## Display
 
 ![Fakebook-image](https://user-images.githubusercontent.com/52515015/115127137-c2af1980-9f99-11eb-9e2e-2cd152865b1e.png)
 ## To-do
