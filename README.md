@@ -4,7 +4,7 @@ Facebook clone using Ruby on Rails.
 
 Final project of the Rails curriculum from [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
 
-Please try it out [here](https://lit-woodland-51918.herokuapp.com) (deployed on Heroku)
+[Please try it out here](https://lit-woodland-51918.herokuapp.com) (deployed on Heroku)
 ## Features
 
 - [Devise](https://github.com/heartcombo/devise) used to handle user registration, authentication, session management, recovery and omniauth
