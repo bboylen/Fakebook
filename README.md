@@ -20,7 +20,7 @@ Final project of the Rails curriculum from [The Odin Project](https://www.theodi
 
 ## Image
 
-![Screenshot from 2021-04-17 16-19-50](https://user-images.githubusercontent.com/52515015/115127137-c2af1980-9f99-11eb-9e2e-2cd152865b1e.png)
+![Fakebook-image](https://user-images.githubusercontent.com/52515015/115127137-c2af1980-9f99-11eb-9e2e-2cd152865b1e.png)
 ## To-do
 
 - Allow posts to contain an image
