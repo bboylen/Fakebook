@@ -1,6 +1,6 @@
 # Fakebook
 
-Facebook clone using Ruby on Rails.
+Facebook clone built with Ruby on Rails.
 
 Final project of the Rails curriculum from [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
 
