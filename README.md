@@ -21,6 +21,10 @@ Final project of the Rails curriculum from [The Odin Project](https://www.theodi
 ## Display
 
 ![Fakebook-image](https://user-images.githubusercontent.com/52515015/115127137-c2af1980-9f99-11eb-9e2e-2cd152865b1e.png)
+
+## Database Relationships
+<img width="1058" alt="Fakebook Data Relationships" src="https://user-images.githubusercontent.com/52515015/132608200-7e7ce777-f528-4227-a8d5-8bfcfd620f6c.png">
+
 ## To-do
 
 - Allow posts to contain an image
