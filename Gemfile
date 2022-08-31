@@ -32,7 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "devise", '~> 4.7.3'
 
 # Use Omniauth to allow OAuth with Facebook
-gem 'omniauth', '~> 1.9.1'
+gem 'omniauth', '~> 1.9.2'
 gem 'omniauth-facebook', '~> 8.0.0'
 
 # Fix error with mimemagic
